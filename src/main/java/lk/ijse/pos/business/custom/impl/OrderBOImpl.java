@@ -13,8 +13,11 @@ import lk.ijse.pos.entity.Order;
 import lk.ijse.pos.entity.OrderDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+
+@Transactional
 @Component
 public class OrderBOImpl implements OrderBO {
     @Autowired
