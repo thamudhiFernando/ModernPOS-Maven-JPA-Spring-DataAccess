@@ -6,12 +6,14 @@ import lk.ijse.pos.dto.ItemDTO;
 import lk.ijse.pos.entity.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
+@Transactional
 public class ItemBOImpl implements ItemBO {
     @Autowired
     private ItemDAO itemDAO ;
